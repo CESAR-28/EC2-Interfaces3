@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
     {path: "pipes", component: PipesComponent},
@@ -14,5 +15,6 @@ export const routes: Routes = [
             {path: "home", component: HomeComponent}
         ]
     },
-    {path: "", redirectTo: "login", pathMatch: "full"} 
+    {path: "", redirectTo: "login", pathMatch: "full"},
+    {path: "**", component: PageNotFoundComponent}
 ];
